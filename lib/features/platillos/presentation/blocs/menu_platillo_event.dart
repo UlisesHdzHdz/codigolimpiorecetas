@@ -1,9 +1,9 @@
 
 import 'package:flutter/material.dart';
 
-import 'cenas.dart';
-import 'comidas.dart';
-import 'desayunos.dart';
+import 'cenas_event.dart';
+import 'comidas_event.dart';
+import 'desayunos_event.dart';
 
 class MenuPlatillo extends StatefulWidget {
   const MenuPlatillo({super.key});

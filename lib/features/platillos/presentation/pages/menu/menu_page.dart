@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../blocs/menu_platillo.dart';
+import '../../blocs/menu_platillo_event.dart';
 class Menu extends StatefulWidget {
   const Menu({super.key});
 

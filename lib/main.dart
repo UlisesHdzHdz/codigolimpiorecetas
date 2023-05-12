@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 
 import 'features/platillos/data/datasources/api/notification_api.dart';
-import 'features/platillos/presentation/pages/menu/menu.dart';
+import 'features/platillos/presentation/pages/menu/menu_page.dart';
 
 
 void main() async {

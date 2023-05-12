@@ -1,26 +1,24 @@
-
 import 'package:flutter/material.dart';
-import '../pages/menu/platillos/desayunos/recetaburrito.dart';
-import '../pages/menu/platillos/desayunos/recetachilaquiles.dart';
-import '../pages/menu/platillos/desayunos/recetamalescalabaza.dart';
-import '../pages/menu/platillos/desayunos/recetapanfrances.dart';
-import '../pages/menu/platillos/desayunos/recetashuevos.dart';
+import '../pages/menu/platillos/comidas/recetajitomate_page.dart';
+import '../pages/menu/platillos/comidas/recetalambre_page.dart';
+import '../pages/menu/platillos/comidas/recetapechuga_page.dart';
+import '../pages/menu/platillos/comidas/recetapollomexicana_page.dart';
+import '../pages/menu/platillos/comidas/recetasalmon_page.dart';
 
-
-class MenuDesa extends StatefulWidget {
-  const MenuDesa({super.key});
+class MenuComida extends StatefulWidget {
+  const MenuComida({super.key});
 
   @override
-  State<MenuDesa> createState() => _MenuCenaState();
+  State<MenuComida> createState() => _MenuComidaState();
 }
 
-class _MenuCenaState extends State<MenuDesa> {
+class _MenuComidaState extends State<MenuComida> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar:AppBar(
         backgroundColor: Colors.amber[300],
-        title: const Text('Desayunos', style: TextStyle(color: Colors.black),),
+        title: const Text('Comidas', style: TextStyle(color: Colors.black),),
         centerTitle: false,
         actions: <Widget>[
           Image.asset('assets/almuerzo.png', width: 40,)
@@ -36,7 +34,6 @@ class _MenuCenaState extends State<MenuDesa> {
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              
               Container(
                 color: const Color.fromARGB(255, 13, 192, 49),
                 height: 10,
@@ -55,10 +52,11 @@ class _MenuCenaState extends State<MenuDesa> {
                   children: <Widget>[
                     const Expanded(child: 
                      CircleAvatar(
-                   backgroundImage: NetworkImage('https://cdn2.cocinadelirante.com/sites/default/files/images/2017/11/comohacerpanfrances.jpg', scale: 1.0),
+                  backgroundImage: NetworkImage('http://www.notiactual.com/wp-content/uploads/2017/09/pollo-con-crema.jpg'),
                   radius: 50,
+
                     ) 
-                   ),
+                ),
                     Center(
                       child: Column(
                         children: [
@@ -67,15 +65,15 @@ class _MenuCenaState extends State<MenuDesa> {
                           color:Colors.amber[300],
                           borderRadius: BorderRadius.circular(10),
                           ),
-                          height: 70,
+                          height: 80,
                           width: 180,
                           child: const Center(
-                            child: Text('Pan frances',
+                            child: Text('Pechuga con crema',
                             style: TextStyle(fontSize: 17, fontFamily: 'rboldt', )
                             ),
+                          ),    
                           ),
-                          ),
-                          MaterialButton(
+                           MaterialButton(
                              elevation: 10,
                             minWidth: 150.0,
                             height: 30.0,
@@ -85,7 +83,7 @@ class _MenuCenaState extends State<MenuDesa> {
                             onPressed: () {
                               Navigator.push(
                               context,
-                              MaterialPageRoute(builder: (context) => const RecetaPan()),
+                              MaterialPageRoute(builder: (context) => const RecetPechugaCrema()),
                             );
                             },
                             color: Colors.grey[300],
@@ -99,7 +97,6 @@ class _MenuCenaState extends State<MenuDesa> {
                         ),
                         ],
                       ),
-
                     ),
                 
                   ],
@@ -109,7 +106,7 @@ class _MenuCenaState extends State<MenuDesa> {
                   children: <Widget>[
                     const Expanded(child: 
                      CircleAvatar(
-                   backgroundImage: NetworkImage('https://assets.tmecosys.com/image/upload/t_web667x528/img/recipe/ras/Assets/7F4EB445-3C80-4275-98DA-B6E52C3D5C26/Derivates/B1829985-5553-49DA-A50B-557524798A43.jpg', scale: 1.0),
+                  backgroundImage: NetworkImage('https://cdn7.kiwilimon.com/clasificacion/95/95.jpg'),
                   radius: 50,
                     ) 
                 ),
@@ -121,15 +118,15 @@ class _MenuCenaState extends State<MenuDesa> {
                           color:Colors.amber[300],
                           borderRadius: BorderRadius.circular(10),
                           ),
-                          height: 70,
+                          height: 80,
                           width: 180,
                           child: const Center(
-                            child: Text('Tamales de calabaza',
+                            child: Text('Salmon rice',
                             style: TextStyle(fontSize: 17, fontFamily: 'rboldt', )
                             ),
                           ),    
-                         ),
-                          MaterialButton(
+                          ),
+                           MaterialButton(
                              elevation: 10,
                             minWidth: 150.0,
                             height: 30.0,
@@ -139,7 +136,7 @@ class _MenuCenaState extends State<MenuDesa> {
                             onPressed: () {
                               Navigator.push(
                               context,
-                              MaterialPageRoute(builder: (context) => const RecetaTamal()),
+                              MaterialPageRoute(builder: (context) => const RecetSalmon()),
                             );
                             },
                             color: Colors.grey[300],
@@ -152,7 +149,6 @@ class _MenuCenaState extends State<MenuDesa> {
                           ),
                         ),
                         ],
-                        
                       ),
                     ),
                 
@@ -163,7 +159,7 @@ class _MenuCenaState extends State<MenuDesa> {
                   children: <Widget>[
                     const Expanded(child: 
                      CircleAvatar(
-                   backgroundImage: NetworkImage('https://i.pinimg.com/originals/a0/57/06/a05706d7c6245dcefe77b38472833226.png', scale: 1.0),
+                  backgroundImage: NetworkImage('https://d1kxxrc2vqy8oa.cloudfront.net/wp-content/uploads/2020/08/17202627/RFB-1007-4-polloalamexicana.jpg'),
                   radius: 50,
                     ) 
                 ),
@@ -175,10 +171,10 @@ class _MenuCenaState extends State<MenuDesa> {
                           color:Colors.amber[300],
                           borderRadius: BorderRadius.circular(10),
                           ),
-                          height: 70,
+                          height: 80,
                           width: 180,
                           child: const Center(
-                            child: Text('Chilaquiles verdes',
+                            child: Text('Pollo a la mexicana',
                             style: TextStyle(fontSize: 17, fontFamily: 'rboldt', )
                             ),
                           ),    
@@ -193,7 +189,7 @@ class _MenuCenaState extends State<MenuDesa> {
                             onPressed: () {
                               Navigator.push(
                               context,
-                              MaterialPageRoute(builder: (context) => const RecetaChilaquiles()),
+                              MaterialPageRoute(builder: (context) => const RecetPollo ()),
                             );
                             },
                             color: Colors.grey[300],
@@ -216,7 +212,7 @@ class _MenuCenaState extends State<MenuDesa> {
                   children: <Widget>[
                     const Expanded(child: 
                      CircleAvatar(
-                   backgroundImage: NetworkImage('https://preview.redd.it/cbm5w7rrvu901.jpg?auto=webp&s=ad0884979baf2e476a7e146884519455a7bf12cf',scale: 1.0),
+                  backgroundImage: NetworkImage('https://farm6.staticflickr.com/5203/13520915855_124af34e31_z.jpg'),
                   radius: 50,
                     ) 
                 ),
@@ -228,10 +224,10 @@ class _MenuCenaState extends State<MenuDesa> {
                           color:Colors.amber[300],
                           borderRadius: BorderRadius.circular(10),
                           ),
-                          height: 70,
+                          height: 80,
                           width: 180,
                           child: const Center(
-                            child: Text('Huevos rancheros',
+                            child: Text('Alambre de lentejas',
                             style: TextStyle(fontSize: 17, fontFamily: 'rboldt', )
                             ),
                           ),    
@@ -246,7 +242,7 @@ class _MenuCenaState extends State<MenuDesa> {
                             onPressed: () {
                               Navigator.push(
                               context,
-                              MaterialPageRoute(builder: (context) => const RecetaHuevos()),
+                              MaterialPageRoute(builder: (context) => const RecetAlambre()),
                             );
                             },
                             color: Colors.grey[300],
@@ -269,7 +265,7 @@ class _MenuCenaState extends State<MenuDesa> {
                   children: <Widget>[
                     const Expanded(child: 
                      CircleAvatar(
-                   backgroundImage: NetworkImage('https://tse3.mm.bing.net/th?id=OIP.K7zZ4mJ6gcderSPztbigUAHaE7&pid=Api&P=0', scale: 1.0),
+                  backgroundImage: NetworkImage('https://i.pinimg.com/originals/b7/cc/c1/b7ccc1c60e4b16e2bb26f9ba1ebde10a.jpg'),
                   radius: 50,
                     ) 
                 ),
@@ -281,10 +277,10 @@ class _MenuCenaState extends State<MenuDesa> {
                           color:Colors.amber[300],
                           borderRadius: BorderRadius.circular(10),
                           ),
-                          height: 70,
+                          height: 80,
                           width: 180,
                           child: const Center(
-                            child: Text('Burrito Ranchero',
+                            child: Text('Jitomate relleno',
                             style: TextStyle(fontSize: 17, fontFamily: 'rboldt', )
                             ),
                           ),    
@@ -299,7 +295,7 @@ class _MenuCenaState extends State<MenuDesa> {
                             onPressed: () {
                               Navigator.push(
                               context,
-                              MaterialPageRoute(builder: (context) => const RecetaBurrito()),
+                              MaterialPageRoute(builder: (context) => const RecetaJitomate()),
                             );
                             },
                             color: Colors.grey[300],
