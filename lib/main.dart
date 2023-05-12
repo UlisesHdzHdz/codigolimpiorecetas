@@ -1,6 +1,8 @@
-import 'package:chef_bolsillo/features/data/datasources/api/notification_api.dart';
-import 'package:chef_bolsillo/features/presentation/pages/menu/menu.dart';
+
 import 'package:flutter/material.dart';
+
+import 'features/platillos/data/datasources/api/notification_api.dart';
+import 'features/platillos/presentation/pages/menu/menu.dart';
 
 
 void main() async {

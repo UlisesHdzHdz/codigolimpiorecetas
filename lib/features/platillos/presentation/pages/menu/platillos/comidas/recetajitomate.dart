@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:ionicons/ionicons.dart';
 
 
-import '../../api/notification_api.dart';
+import '../../../../../data/datasources/api/notification_api.dart';
+
 
 class RecetaJitomate extends StatefulWidget {
   const RecetaJitomate({super.key});

@@ -1,7 +1,9 @@
-import 'package:chef_bolsillo/features/presentation/pages/menu/platillos/cenas.dart';
-import 'package:chef_bolsillo/features/presentation/pages/menu/platillos/comidas.dart';
-import 'package:chef_bolsillo/features/presentation/pages/menu/platillos/desayunos.dart';
+
 import 'package:flutter/material.dart';
+
+import 'cenas.dart';
+import 'comidas.dart';
+import 'desayunos.dart';
 
 class MenuPlatillo extends StatefulWidget {
   const MenuPlatillo({super.key});

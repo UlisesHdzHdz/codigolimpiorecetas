@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:ionicons/ionicons.dart';
 
 
-import '../../api/notification_api.dart';
+import '../../../../../data/datasources/api/notification_api.dart';
 
 class RecetaTamal extends StatefulWidget {
   const RecetaTamal({super.key});

@@ -1,28 +1,29 @@
 import 'package:flutter/material.dart';
+import '../pages/menu/platillos/cenas/recetabrocheta.dart';
+import '../pages/menu/platillos/cenas/recetachayotes.dart';
+import '../pages/menu/platillos/cenas/recetapasta.dart';
+import '../pages/menu/platillos/cenas/recetaquesadillas.dart';
+import '../pages/menu/platillos/cenas/recetasincronizada.dart';
 
-import '../../../../../Recetas/Comidas/recetajitomate.dart';
-import '../../../../../Recetas/Comidas/recetalambre.dart';
-import '../../../../../Recetas/Comidas/recetapechuga.dart';
-import '../../../../../Recetas/Comidas/recetapollomexicana.dart';
-import '../../../../../Recetas/Comidas/recetasalmon.dart';
 
-class MenuComida extends StatefulWidget {
-  const MenuComida({super.key});
+class MenuCena extends StatefulWidget {
+  const MenuCena({super.key});
 
   @override
-  State<MenuComida> createState() => _MenuComidaState();
+  State<MenuCena> createState() => _MenuCenaState();
 }
 
-class _MenuComidaState extends State<MenuComida> {
+class _MenuCenaState extends State<MenuCena> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar:AppBar(
         backgroundColor: Colors.amber[300],
-        title: const Text('Comidas', style: TextStyle(color: Colors.black),),
+        title: const Text('Cenas', style: TextStyle(color: Colors.black),),
         centerTitle: false,
         actions: <Widget>[
           Image.asset('assets/almuerzo.png', width: 40,)
+
         ],
       ),
        body: ListView(
@@ -53,9 +54,8 @@ class _MenuComidaState extends State<MenuComida> {
                   children: <Widget>[
                     const Expanded(child: 
                      CircleAvatar(
-                  backgroundImage: NetworkImage('http://www.notiactual.com/wp-content/uploads/2017/09/pollo-con-crema.jpg'),
+                  backgroundImage: NetworkImage('https://60minutos.info/wp-content/uploads/2020/10/SINCRONIZADAS-DE-POLLO.jpg'),
                   radius: 50,
-
                     ) 
                 ),
                     Center(
@@ -69,12 +69,12 @@ class _MenuComidaState extends State<MenuComida> {
                           height: 80,
                           width: 180,
                           child: const Center(
-                            child: Text('Pechuga con crema',
+                            child: Text('Sincronizadas',
                             style: TextStyle(fontSize: 17, fontFamily: 'rboldt', )
                             ),
                           ),    
-                          ),
-                           MaterialButton(
+                         ),
+                          MaterialButton(
                              elevation: 10,
                             minWidth: 150.0,
                             height: 30.0,
@@ -84,7 +84,7 @@ class _MenuComidaState extends State<MenuComida> {
                             onPressed: () {
                               Navigator.push(
                               context,
-                              MaterialPageRoute(builder: (context) => const RecetPechugaCrema()),
+                              MaterialPageRoute(builder: (context) => const RecetSincronizada()),
                             );
                             },
                             color: Colors.grey[300],
@@ -107,7 +107,7 @@ class _MenuComidaState extends State<MenuComida> {
                   children: <Widget>[
                     const Expanded(child: 
                      CircleAvatar(
-                  backgroundImage: NetworkImage('https://cdn7.kiwilimon.com/clasificacion/95/95.jpg'),
+                  backgroundImage: NetworkImage('https://laopinion.com/wp-content/uploads/sites/3/2021/02/shutterstock_1007405620.jpg?quality=80&strip=all&w=1200'),
                   radius: 50,
                     ) 
                 ),
@@ -122,13 +122,13 @@ class _MenuComidaState extends State<MenuComida> {
                           height: 80,
                           width: 180,
                           child: const Center(
-                            child: Text('Salmon rice',
+                            child: Text('Brochetas de res',
                             style: TextStyle(fontSize: 17, fontFamily: 'rboldt', )
                             ),
                           ),    
                           ),
                            MaterialButton(
-                             elevation: 10,
+                            elevation: 10,
                             minWidth: 150.0,
                             height: 30.0,
                             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20),
@@ -137,7 +137,7 @@ class _MenuComidaState extends State<MenuComida> {
                             onPressed: () {
                               Navigator.push(
                               context,
-                              MaterialPageRoute(builder: (context) => const RecetSalmon()),
+                              MaterialPageRoute(builder: (context) => const RecetBrocheta()),
                             );
                             },
                             color: Colors.grey[300],
@@ -160,7 +160,7 @@ class _MenuComidaState extends State<MenuComida> {
                   children: <Widget>[
                     const Expanded(child: 
                      CircleAvatar(
-                  backgroundImage: NetworkImage('https://d1kxxrc2vqy8oa.cloudfront.net/wp-content/uploads/2020/08/17202627/RFB-1007-4-polloalamexicana.jpg'),
+                  backgroundImage: NetworkImage('http://milrecetas.net/wp-content/uploads/2015/12/Chayotes-gratinados-4.jpg'),
                   radius: 50,
                     ) 
                 ),
@@ -175,13 +175,13 @@ class _MenuComidaState extends State<MenuComida> {
                           height: 80,
                           width: 180,
                           child: const Center(
-                            child: Text('Pollo a la mexicana',
+                            child: Text('Chayotes gratinados',
                             style: TextStyle(fontSize: 17, fontFamily: 'rboldt', )
                             ),
                           ),    
-                         ),
-                          MaterialButton(
-                             elevation: 10,
+                          ),
+                           MaterialButton(
+                            elevation: 10,
                             minWidth: 150.0,
                             height: 30.0,
                             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20),
@@ -190,7 +190,7 @@ class _MenuComidaState extends State<MenuComida> {
                             onPressed: () {
                               Navigator.push(
                               context,
-                              MaterialPageRoute(builder: (context) => const RecetPollo ()),
+                              MaterialPageRoute(builder: (context) => const RecetaChayote()),
                             );
                             },
                             color: Colors.grey[300],
@@ -213,7 +213,7 @@ class _MenuComidaState extends State<MenuComida> {
                   children: <Widget>[
                     const Expanded(child: 
                      CircleAvatar(
-                  backgroundImage: NetworkImage('https://farm6.staticflickr.com/5203/13520915855_124af34e31_z.jpg'),
+                  backgroundImage: NetworkImage('https://www.hechicerafit.com/static/r/484/pasta-ligera-con-salsa-cremosa-de-albahaca-baja-en-calorias-baja-en-grasa-es-6ocHr.jpg'),
                   radius: 50,
                     ) 
                 ),
@@ -228,13 +228,13 @@ class _MenuComidaState extends State<MenuComida> {
                           height: 80,
                           width: 180,
                           child: const Center(
-                            child: Text('Alambre de lentejas',
+                            child: Text('Pasta ligera',
                             style: TextStyle(fontSize: 17, fontFamily: 'rboldt', )
                             ),
                           ),    
                          ),
                           MaterialButton(
-                             elevation: 10,
+                            elevation: 10,
                             minWidth: 150.0,
                             height: 30.0,
                             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20),
@@ -243,7 +243,7 @@ class _MenuComidaState extends State<MenuComida> {
                             onPressed: () {
                               Navigator.push(
                               context,
-                              MaterialPageRoute(builder: (context) => const RecetAlambre()),
+                              MaterialPageRoute(builder: (context) => const RecetaPasta()),
                             );
                             },
                             color: Colors.grey[300],
@@ -266,7 +266,7 @@ class _MenuComidaState extends State<MenuComida> {
                   children: <Widget>[
                     const Expanded(child: 
                      CircleAvatar(
-                  backgroundImage: NetworkImage('https://i.pinimg.com/originals/b7/cc/c1/b7ccc1c60e4b16e2bb26f9ba1ebde10a.jpg'),
+                  backgroundImage: NetworkImage('https://cheforopeza.com.mx/wp-content/uploads/2019/04/quesadillas-atun.jpg'),
                   radius: 50,
                     ) 
                 ),
@@ -281,13 +281,13 @@ class _MenuComidaState extends State<MenuComida> {
                           height: 80,
                           width: 180,
                           child: const Center(
-                            child: Text('Jitomate relleno',
+                            child: Text('Quesadillas de atún',
                             style: TextStyle(fontSize: 17, fontFamily: 'rboldt', )
                             ),
                           ),    
-                          ),
-                           MaterialButton(
-                             elevation: 10,
+                        ),
+                         MaterialButton(
+                          elevation: 10,
                             minWidth: 150.0,
                             height: 30.0,
                             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20),
@@ -296,7 +296,7 @@ class _MenuComidaState extends State<MenuComida> {
                             onPressed: () {
                               Navigator.push(
                               context,
-                              MaterialPageRoute(builder: (context) => const RecetaJitomate()),
+                              MaterialPageRoute(builder: (context) => const RecetaQuesa()),
                             );
                             },
                             color: Colors.grey[300],
